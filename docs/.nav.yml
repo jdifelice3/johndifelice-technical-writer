@@ -1,0 +1,16 @@
+nav:
+  # - "*"
+  - Home: index.md
+  # - getting-started.md
+  # - support.md
+  # - guides
+  - CRM Example
+    # - User Guide: userguide.md
+    # - Developer Guide: devguide.md
+  - About: about.md
+  # # - More Resources: 
+  # #   - "*" 
+  # #   - MkDocs: https://mkdocs.org
+
+sort:
+  type: natural

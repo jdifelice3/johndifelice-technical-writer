@@ -1,0 +1,45 @@
+site_name: John DiFelice - Documentation Portfolio
+site_url: https://github.com/jdifelice3
+repo_url: https://github.com/jdifelice3/my-docs-site
+repo_name: GitHub
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: false
+      line_spans: __span
+      pygments_lang_class: true
+
+extra_css:
+  - assets/stylesheets/dark.css
+
+plugins:
+  - search
+  - mermaid2
+  - awesome-nav
+
+# nav:
+#   - Home: index.md
+#   # - CRM Example: crm.md
+#   # - API Reference: api.md
+#   - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jdifelice3
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jdifelice/
+  footer:
+    text: "© 2025 John DiFelice — Documentation Portfolio"

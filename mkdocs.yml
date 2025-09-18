@@ -20,6 +20,7 @@ markdown_extensions:
       anchor_linenums: false
       line_spans: __span
       pygments_lang_class: true
+  - attr_list
 
 extra_css:
   - assets/stylesheets/dark.css
@@ -28,12 +29,6 @@ plugins:
   - search
   - mermaid2
   - awesome-nav
-
-# nav:
-#   - Home: index.md
-#   # - CRM Example: crm.md
-#   # - API Reference: api.md
-#   - About: about.md
 
 extra:
   social:

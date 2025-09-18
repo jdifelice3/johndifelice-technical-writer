@@ -1,6 +1,6 @@
 # Welcome
 
-Hi, I’m John DiFelice, an **enterprise architect** and **published/produced author** pivoting into technical writing.
+Hello, I’m John DiFelice, an **enterprise architect** and **published/produced author** pivoting into technical writing.
 
 I’ve spent 20+ years designing and documenting complex systems (cloud, integration, security, data) and just as long honing the craft of clear, engaging prose through fiction and playwriting. The result is deep technical credibility plus a strong narrative sense. This is what I bring to documentation.
 

@@ -109,9 +109,51 @@ Vite made full-stack debugging much easier, which is a big reason it was chosen 
 Vite requires a config file, `vite.config.js`, which was downloaded when the project was cloned.
 
 At the top of the project folder structure is a folder named `.vscode`. Within this folder are two files:
+<br>
+# Full-Stack Debugging
 
 `launch.json`
-:   a configuration file used to define how the debugger should run an application. It specifies settings such as the program to debug, environment variables, and other parameters needed for debugging sessions.  
+:   a configuration file used to define how the debugger should run an application. It specifies settings such as the program to debug, environment variables, and other parameters needed for debugging sessions.
+```json
+// launch.json for ZohoDataExplorer
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Vite Frontend (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/client/src",
+      "preLaunchTask": "Start Vite Frontend",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*",
+        "webpack:///*": "*"
+      }
+    },
+    {
+      "name": "Debug Node Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/server.js",
+      "cwd": "${workspaceFolder}/server",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Fullstack Debug",
+      "configurations": ["Debug Node Backend", "Debug Vite Frontend (Chrome)"]
+    }
+  ]
+}
+// As shown, the file is set up to debug:
+// - client only
+// - server only
+// - both
+```
+
+
 
 `tasks.json`
 :   a configuration file used to define and manage tasks that automate various operations, such as building, testing, or running scripts. It allows users to specify commands, arguments, and other settings for executing tasks directly from the editor.
